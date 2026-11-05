@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Branch</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Expand container size for a wider dashboard view */
+        .login-container {
+            max-width: 600px;
+        }
+        
+        .branch-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        @media (max-width: 480px) {
+            .branch-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .branch-card {
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: none;
+            width: 100%;
+        }
+
+        .branch-card:hover {
+            border-color: #4f46e5;
+            background-color: rgba(79, 70, 229, 0.02);
+            transform: translateY(-2px);
+        }
+
+        .branch-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .branch-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .branch-desc {
+            font-size: 12px;
+            color: #666666;
+            line-height: 1.4;
+        }
+
+        .logout-link {
+            display: inline-block;
+            margin-top: 16px;
+            color: #ef4444;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .logout-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card" style="text-align: center;">
+            <h2>Select Your Branch</h2>
+            <p class="subtitle">Please choose a branch portal to proceed to your workspace</p>
+            
+            <div class="branch-grid">
+                <!-- Branch 1 -->
+                <button class="branch-card" onclick="location.href='dashboard-hq.html'">
+                    <div class="branch-icon">🏢</div>
+                    <div class="branch-name">Headquarters</div>
+                    <div class="branch-desc">Central administration, HR, and corporate management operations.</div>
+                </button>
+
+                <!-- Branch 2 -->
+                <button class="branch-card" onclick="location.href='dashboard-north.html'">
+                    <div class="branch-icon">🌲</div>
+                    <div class="branch-name">North Branch</div>
+                    <div class="branch-desc">Regional sales, distribution logistics, and local customer support.</div>
+                </button>
+
+                <!-- Branch 3 -->
+                <button class="branch-card" onclick="location.href='dashboard-south.html'">
+                    <div class="branch-icon">☀️</div>
+                    <div class="branch-name">South Branch</div>
+                    <div class="branch-desc">Production facilities, manufacturing operations, and inventory depot.</div>
+                </button>
+
+                <!-- Branch 4 -->
+                <button class="branch-card" onclick="location.href='dashboard-digital.html'">
+                    <div class="branch-icon">💻</div>
+                    <div class="branch-name">Digital/Remote</div>
+                    <div class="branch-desc">Global remote teams, IT infrastructure, and cloud management systems.</div>
+                </button>
+            </div>
+
+            <a href="index.html" class="logout-link">← Return to Login</a>
+        </div>
+    </div>
+</body>
+</html>
